@@ -1,0 +1,284 @@
+.watchlist-card {
+  background: #ffffff;
+  border: 1px solid #e6eaf0;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.watchlist-top {
+  padding: 20px 22px 14px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.watchlist-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.watchlist-header h2 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.watchlist-header span {
+  display: block;
+  margin-top: 3px;
+  color: #94a3b8;
+  font-size: 11.5px;
+}
+
+.watchlist-counter {
+  font-size: 11px;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.watchlist-tabs-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.watchlist-tabs {
+  display: flex;
+  background: #f1f5f9;
+  border-radius: 6px;
+  padding: 2px;
+}
+
+.wl-tab-btn {
+  border: none;
+  background: transparent;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.wl-tab-btn.active {
+  background: #ffffff;
+  color: #387ed1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.wl-search-wrap input {
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 11px;
+  width: 110px;
+  outline: none;
+}
+
+.wl-search-wrap input:focus {
+  border-color: #387ed1;
+  background: #ffffff;
+}
+
+.watchlist-items-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.watchlist-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 22px;
+  border-bottom: 1px solid #f8fafc;
+  position: relative;
+  transition: background 0.15s ease;
+}
+
+.watchlist-item-row:hover {
+  background: #f8fafc;
+}
+
+.wl-stock-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wl-stock-symbol {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.wl-stock-exchange {
+  font-size: 10px;
+  color: #94a3b8;
+  background: #f1f5f9;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.wl-hover-actions {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 6px;
+  align-items: center;
+}
+
+.watchlist-item-row:hover .wl-hover-actions {
+  display: flex;
+}
+
+.wl-action-btn {
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.1s ease;
+}
+
+.wl-action-btn.buy {
+  background: #387ed1;
+  color: #ffffff;
+}
+
+.wl-action-btn.sell {
+  background: #ff5722;
+  color: #ffffff;
+}
+
+.wl-action-btn.depth {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+.wl-action-btn:hover {
+  transform: scale(1.05);
+}
+
+.wl-stock-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.wl-stock-price {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.wl-stock-change {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* Market Depth Drawer */
+.market-depth-drawer {
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  padding: 14px 18px;
+  animation: slideInDown 0.15s ease-out;
+}
+
+.depth-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.depth-header strong {
+  font-size: 12px;
+  color: #1e293b;
+}
+
+.depth-close {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.depth-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  font-size: 11px;
+}
+
+.depth-bids, .depth-offers {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+
+.depth-table-head {
+  display: flex;
+  justify-content: space-between;
+  color: #94a3b8;
+  font-weight: 600;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 10px;
+}
+
+.depth-table-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  font-weight: 500;
+}
+
+.depth-table-row.bid span:last-child {
+  color: #387ed1;
+  font-weight: 600;
+}
+
+.depth-table-row.ask span:first-child {
+  color: #ff5722;
+  font-weight: 600;
+}
+
+.depth-total {
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px dashed #e2e8f0;
+  text-align: right;
+  font-weight: 600;
+  color: #64748b;
+  font-size: 10.5px;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

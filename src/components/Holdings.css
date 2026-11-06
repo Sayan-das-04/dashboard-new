@@ -1,0 +1,270 @@
+.holdings-section {
+  margin-top: 24px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.section-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.section-header span {
+  display: block;
+  margin-top: 3px;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.view-all-btn {
+  border: none;
+  background: transparent;
+  color: #387ed1;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.view-all-btn:hover {
+  text-decoration: underline;
+}
+
+.holdings-card {
+  background: #ffffff;
+  border: 1px solid #e6eaf0;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.holdings-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.stat-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-title {
+  color: #94a3b8;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.stat-large {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: -0.3px;
+}
+
+.stat-sub {
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.portfolio-progress {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11.5px;
+  color: #64748b;
+  margin-bottom: 10px;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 8px;
+  background: #f1f5f9;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+}
+
+.progress-fill.energy { background: #387ed1; }
+.progress-fill.it { background: #10b981; }
+.progress-fill.banking { background: #f59e0b; }
+.progress-fill.auto { background: #8b5cf6; }
+
+/* Full Page Holdings View */
+.holdings-full-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.holdings-hero-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.hero-stat-card {
+  background: #ffffff;
+  border: 1px solid #e6eaf0;
+  border-radius: 10px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hero-stat-card span {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.hero-stat-card strong {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.holdings-table-container {
+  background: #ffffff;
+  border: 1px solid #e6eaf0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.table-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 7px 12px;
+  width: 280px;
+}
+
+.table-search input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 12.5px;
+  width: 100%;
+}
+
+.toolbar-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.holdings-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.holdings-table th {
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 12px 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.holdings-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 13px;
+  color: #334155;
+  font-weight: 500;
+}
+
+.holdings-table tr:hover {
+  background: #fbfcfe;
+}
+
+.instrument-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.instrument-col strong {
+  color: #1e293b;
+  font-size: 13.5px;
+}
+
+.exchange-sub {
+  font-size: 10.5px;
+  color: #94a3b8;
+  margin-top: 2px;
+}
+
+.ltp-cell {
+  font-weight: 600;
+}
+
+.action-buttons-cell {
+  display: flex;
+  gap: 6px;
+}
+
+.stock-btn-buy {
+  background: #387ed1;
+  color: #ffffff;
+  border: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.stock-btn-buy:hover {
+  opacity: 0.9;
+}
+
+.stock-btn-sell {
+  background: #ff5722;
+  color: #ffffff;
+  border: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.stock-btn-sell:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 900px) {
+  .holdings-summary-grid, .holdings-hero-bar {
+    grid-template-columns: 1fr 1fr;
+  }
+}

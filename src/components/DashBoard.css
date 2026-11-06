@@ -1,0 +1,373 @@
+.dashboard {
+  min-height: 100vh;
+  display: flex;
+  background-color: #f8fafc;
+  position: relative;
+}
+
+.dashboard-main {
+  margin-left: 240px;
+  width: calc(100% - 240px);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8fafc;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 24px 32px 48px;
+  max-width: 1380px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Toast Notification */
+.dashboard-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 28px;
+  background: #1e293b;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 9999;
+  animation: slideUp 0.25s ease-out;
+}
+
+.dashboard-toast.success {
+  border-left: 4px solid #159447;
+}
+
+.dashboard-toast.danger {
+  border-left: 4px solid #df514c;
+}
+
+.dashboard-toast.info {
+  border-left: 4px solid #387ed1;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Kite Order Modal */
+.order-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  animation: fadeIn 0.15s ease-out;
+}
+
+.order-modal {
+  width: 440px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  animation: scaleIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.order-modal-header {
+  padding: 18px 24px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s ease;
+}
+
+.order-modal-header.buy {
+  background: #387ed1;
+}
+
+.order-modal-header.sell {
+  background: #ff5722;
+}
+
+.order-modal-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.order-modal-title h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+.order-modal-exchange {
+  background: rgba(255, 255, 255, 0.22);
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.order-modal-price {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.order-modal-close {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 1;
+  opacity: 0.85;
+  transition: opacity 0.15s;
+}
+
+.order-modal-close:hover {
+  opacity: 1;
+}
+
+.order-modal-body {
+  padding: 20px 24px;
+}
+
+.order-type-switch {
+  display: flex;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.order-type-btn {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.order-type-btn.active.buy-active {
+  background: #eef6ff;
+  color: #387ed1;
+}
+
+.order-type-btn.active.sell-active {
+  background: #fff4f0;
+  color: #ff5722;
+}
+
+.order-segment-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.segment-pill {
+  padding: 6px 14px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  color: #475569;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.segment-pill.active {
+  border-color: #387ed1;
+  background: #387ed1;
+  color: #ffffff;
+}
+
+.order-field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.order-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.order-field-group label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.order-input-wrap {
+  display: flex;
+  align-items: center;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.order-input-wrap input {
+  width: 100%;
+  border: none;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1e293b;
+  outline: none;
+}
+
+.order-stepper-btn {
+  border: none;
+  background: #f1f5f9;
+  color: #475569;
+  padding: 8px 12px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.order-stepper-btn:hover {
+  background: #e2e8f0;
+}
+
+.order-variety-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 16px;
+}
+
+.order-variety-row label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #475569;
+  cursor: pointer;
+}
+
+.order-modal-footer {
+  padding: 16px 24px;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-margin-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-margin-info span {
+  font-size: 11px;
+  color: #64748b;
+}
+
+.order-margin-info strong {
+  font-size: 14px;
+  color: #1e293b;
+}
+
+.order-modal-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.order-submit-btn {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s ease, transform 0.1s;
+}
+
+.order-submit-btn.buy {
+  background: #387ed1;
+}
+
+.order-submit-btn.buy:hover {
+  background: #256bb8;
+}
+
+.order-submit-btn.sell {
+  background: #ff5722;
+}
+
+.order-submit-btn.sell:hover {
+  background: #e64a19;
+}
+
+.order-cancel-btn {
+  padding: 10px 16px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  border-radius: 6px;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.order-cancel-btn:hover {
+  background: #f1f5f9;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 900px) {
+  .dashboard-main {
+    margin-left: 0;
+    width: 100%;
+  }
+  .dashboard-content {
+    padding: 16px;
+  }
+}
+

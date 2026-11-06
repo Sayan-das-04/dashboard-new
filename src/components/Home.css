@@ -1,0 +1,84 @@
+.home-dashboard {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-welcome-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 8px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.welcome-left h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: -0.4px;
+  margin: 0;
+}
+
+.welcome-subtitle {
+  color: #64748b;
+  font-size: 13.5px;
+  margin-top: 6px;
+}
+
+.today-date {
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.welcome-right {
+  display: flex;
+  align-items: center;
+}
+
+.market-session-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #edf8f1;
+  color: #159447;
+  border: 1px solid #c7eed6;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.pulse-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #159447;
+  box-shadow: 0 0 0 rgba(21, 148, 71, 0.4);
+  animation: pulseGreen 1.8s infinite;
+}
+
+@keyframes pulseGreen {
+  0% {
+    box-shadow: 0 0 0 0 rgba(21, 148, 71, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(21, 148, 71, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(21, 148, 71, 0);
+  }
+}
+
+.trading-section-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 20px;
+}
+
+@media (max-width: 960px) {
+  .trading-section-grid {
+    grid-template-columns: 1fr;
+  }
+}

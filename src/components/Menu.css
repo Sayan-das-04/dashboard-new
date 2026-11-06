@@ -1,0 +1,408 @@
+
+/* ========================================
+   FINORA SIDEBAR - PROFESSIONAL UI
+======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Main Sidebar */
+.menu {
+  width: 240px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background: #ffffff;
+  border-right: 1px solid #e6eaf0;
+
+  padding: 20px 14px;
+
+  display: flex;
+  flex-direction: column;
+
+  z-index: 1000;
+  user-select: none;
+  overflow-x: hidden;
+
+  transition: width 0.25s ease, transform 0.25s ease;
+}
+
+/* ========================================
+   HEADER / LOGO
+======================================== */
+
+.menu-header {
+  position: relative;
+  padding: 4px 8px 28px;
+  flex-shrink: 0;
+}
+
+.menu-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.menu-logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  color: #1e293b;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  width: 100%;
+  min-height: 42px;
+
+  padding: 10px 12px;
+
+  background: transparent;
+  border: none;
+  border-radius: 9px;
+
+  color: #64748b;
+  text-align: left;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+  white-space: nowrap;
+
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Icons */
+.menu-icon {
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+  color: #64748b;
+
+  transition: color 0.2s ease;
+}
+
+.menu-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Labels */
+.menu-label {
+  flex: 1;
+  white-space: nowrap;
+}
+
+/* Hover */
+.menu-link:hover {
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+.menu-link:hover .menu-icon {
+  color: #387ed1;
+}
+
+/* Active */
+.menu-link.active {
+  background: #edf5ff;
+  color: #387ed1;
+  font-weight: 600;
+}
+
+.menu-link.active .menu-icon {
+  color: #387ed1;
+}
+
+/* ========================================
+   BADGES
+======================================== */
+
+.menu-badge {
+  background: #eef6ff;
+  color: #387ed1;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  padding: 2px 7px;
+  border-radius: 10px;
+
+  flex-shrink: 0;
+}
+
+.menu-badge-text {
+  background: #fef3c7;
+  color: #d97706;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  padding: 3px 6px;
+  border-radius: 5px;
+
+  letter-spacing: 0.3px;
+  flex-shrink: 0;
+}
+
+/* ========================================
+   USER PROFILE
+======================================== */
+
+.menu-bottom {
+  margin-top: auto;
+  padding-top: 16px;
+
+  border-top: 1px solid #f1f5f9;
+}
+
+.user-profile-widget {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 9px 10px;
+  border-radius: 10px;
+
+  background: #f8fafc;
+
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.user-profile-widget:hover {
+  background: #f1f5f9;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, #387ed1, #256bb8);
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 600;
+  font-size: 14px;
+
+  flex-shrink: 0;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.user-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.user-client-id {
+  font-size: 11px;
+  color: #94a3b8;
+  margin-top: 2px;
+}
+
+/* ========================================
+   DESKTOP COLLAPSED SIDEBAR
+======================================== */
+
+.menu.collapsed {
+  width: 72px;
+  padding: 20px 10px;
+}
+
+.menu.collapsed .menu-header {
+  padding: 4px 6px 28px;
+}
+
+.menu.collapsed .logo-text {
+  display: none;
+}
+
+.menu.collapsed .menu-link {
+  justify-content: center;
+  padding: 10px 8px;
+}
+
+.menu.collapsed .menu-label,
+.menu.collapsed .menu-badge,
+.menu.collapsed .menu-badge-text,
+.menu.collapsed .user-details {
+  display: none;
+}
+
+.menu.collapsed .user-profile-widget {
+  justify-content: center;
+  padding: 8px 0;
+}
+
+/* Desktop Collapse Button */
+.sidebar-collapse-toggle {
+  position: absolute;
+  top: 12px;
+  right: -10px;
+
+  width: 24px;
+  height: 24px;
+
+  border: 1px solid #e6eaf0;
+  border-radius: 50%;
+
+  background: #ffffff;
+  color: #387ed1;
+
+  font-size: 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* ========================================
+   MOBILE HAMBURGER
+======================================== */
+
+.sidebar-mobile-toggle {
+  display: none;
+
+  position: fixed;
+  top: 14px;
+  left: 14px;
+
+  width: 42px;
+  height: 42px;
+
+  background: #ffffff;
+  color: #387ed1;
+
+  border: 1px solid #e6eaf0;
+  border-radius: 9px;
+
+  font-size: 22px;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  z-index: 1100;
+
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+}
+
+/* ========================================
+   TABLET AND MOBILE
+======================================== */
+
+@media (max-width: 900px) {
+  .sidebar-mobile-toggle {
+    display: flex;
+  }
+
+  .sidebar-collapse-toggle {
+    display: none;
+  }
+
+  .menu {
+    width: 240px;
+    padding: 20px 14px;
+
+    transform: translateX(-100%);
+    box-shadow: none;
+  }
+
+  .menu.open {
+    transform: translateX(0);
+
+    box-shadow: 8px 0 25px rgba(15, 23, 42, 0.08);
+  }
+
+  /* Always show full sidebar in mobile drawer */
+  .menu.collapsed {
+    width: 240px;
+    padding: 20px 14px;
+  }
+
+  .menu.collapsed .menu-header {
+    padding: 4px 8px 28px;
+  }
+
+  .menu.collapsed .logo-text,
+  .menu.collapsed .menu-label,
+  .menu.collapsed .menu-badge,
+  .menu.collapsed .menu-badge-text,
+  .menu.collapsed .user-details {
+    display: flex;
+  }
+
+  .menu.collapsed .menu-label {
+    flex: 1;
+  }
+
+  .menu.collapsed .menu-link {
+    justify-content: flex-start;
+    padding: 10px 12px;
+  }
+
+  .menu.collapsed .user-profile-widget {
+    justify-content: flex-start;
+    padding: 9px 10px;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+  .sidebar-mobile-toggle {
+    width: 40px;
+    height: 40px;
+    top: 12px;
+    left: 12px;
+  }
+}
